@@ -159,6 +159,7 @@ public class MainActivity extends Activity {
     }
 
     private void buildHome() {
+        appCards.clear();
         root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
         root.setPadding(dp(38), dp(24), dp(38), dp(18));
@@ -255,7 +256,7 @@ public class MainActivity extends Activity {
         params.width = dp(112);
         params.height = dp(142);
         params.setMargins(dp(7), dp(6), dp(7), dp(6));
-        grid.addView(card, params);
+        card.setLayoutParams(params);
         appCards.add(card);
 
         card.setOnClickListener(v -> {
